@@ -1,0 +1,16 @@
+/* div{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height:100vh;
+    /* text-decoration: underline; */
+    /* padding: 20px; */
+/* } */ 
+
+table,thead,tbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
