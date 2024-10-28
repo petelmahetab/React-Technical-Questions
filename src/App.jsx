@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './Components/Header'
+import React from 'react';
+// Adjust the import path as necessary
+import LeftSection from './Components/LeftSection';
+import RightSection from './Components/RightSection';
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Header/>
-    </>
-  )
+    <div className="App flex">
+   <LeftSection/>
+   <RightSection/>
+    </div>
+  );
 }
 
-export default App
+export default App;
