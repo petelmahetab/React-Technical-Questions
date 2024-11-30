@@ -1,0 +1,19 @@
+ 
+ This is first project we are going to start making and bukd confidence in the interview as well and react aslo.
+
+ 1.Custom Scroll Indicator 
+ name of project 
+
+ Discription:-->
+
+ when we are trying to hover or click on any component that componet will be expanded as full content will be shown and after remove the cursor the that component will be again minimizes.
+ 
+ also make an feature that can be select multiple componet at time...
+
+
+ accodian componet
+
+
+ //Approach of then problem.
+ 1.create an component and accodian file for used in mutliple places.
+ 2.
