@@ -1,7 +1,7 @@
 // import { data } from "autoprefixer";
 
-//This is an Data accordion.?
-const accordionData = [
+//This is an Data accordion.? Demo 
+export const Data = [
     {
       id: 1,
       title: "What is React?",
@@ -28,4 +28,4 @@ const accordionData = [
     },
   ];
   
-  export default accordionData;
+  

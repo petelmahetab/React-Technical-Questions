@@ -16,4 +16,9 @@
 
  //Approach of then problem.
  1.create an component and accodian file for used in mutliple places.
- 2.
+ 2.onclick on title or header of accordian and inside the that call back we check selected input and id will be same.
+   a. if slected item and id same then -> null (pehle se hi selected hoga toh )
+   b. only one will be selected -> item(nhi toh item add karo)
+
+   c.add condition for checking equal if true osko Div create karo inside result joh Title as props Lega .Fir isko Onclick wale function me call kr do..
+   
