@@ -1,56 +1,70 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 
 function Index() {
-    //useState for the type of color
-    const [TypeOfColor, setTypeOfColor] = useState("hex")
+    // useState for the type of color
+    const [TypeOfColor, setTypeOfColor] = useState("hex");
+    const [color, setColor] = useState('#000000');
 
-
-    const [color, setcolor] = useState('#000000')
-
-    //function for generating an random colors
-
+    // Generate a random HEX color
     function handleCreateRandomHexColor() {
-//HEX values Should be for array and its range  0 to 9 it pickes randomly,A to F alphabets and for Starting #
-        const hex=[1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
-let hash="#";
-//iterate in that hex array for getting random hex number with math random.6 beacause we need 6 digit hex Number
-        for(let i=0;i<6;i++){
-    hash+=hash[generateRandom(hex.length)]
+        const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+        let hash = "#";
+        for (let i = 0; i < 6; i++) {
+            hash += hex[generateRandom(hex.length)];
         }
-
-        console.log(hash);
+        setColor(hash);
     }
 
-    //I am going to create an Function for random generating element using MATH.random method.
- 
-    function generateRandom(len){
-        return Math.floor(Math.random()*len)
+    // Generate a random RGB color
+    function handleCreateRandomRgbColor() {
+        const r = generateRandom(256);
+        const g = generateRandom(256);
+        const b = generateRandom(256);
+        setColor(`rgb(${r},${g},${b})`);
     }
 
-
-    function handleCreateRandomRgbColor(){
-
+    // Utility function to generate random numbers
+    function generateRandom(len) {
+        return Math.floor(Math.random() * len);
     }
+
+    // Side effect: Generate a random color when the type changes
+    useEffect(() => {
+        if (TypeOfColor === 'rgb') {
+            handleCreateRandomRgbColor();
+        } else {
+            handleCreateRandomHexColor();
+        }
+    }, [TypeOfColor]);
 
     return (
         <div style={{
             width: "100vw",
-            height: "50px",
+            height: "100vh",
             display: "flex",
+            flexDirection: "column",
             justifyContent: "center",
-            gap: "20px"
+            alignItems: "center",
+            gap: "20px",
+            backgroundColor: color // Apply the color as background
         }}>
-            <button onClick={() => {
-                setTypeOfColor('hex')
-            }}>Create HEX Color</button>
+            <button onClick={() => setTypeOfColor('hex')}>Create HEX Color</button>
+            <button onClick={() => setTypeOfColor('rgb')}>Create RGB Color</button>
+            <button onClick={TypeOfColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor}>
+                Generate Random Color
+            </button>
 
-            <button onClick={() => {
-                setTypeOfColor('rgb')
-            }}>Create RGB Color</button>
-            {/* on This button we have to perform an function for generating RANDOM Color based on HEX and RGB .If type of color will be matches with the Hex then generat color based on HEX value.*/}
-            <button onClick={TypeOfColor === 'hex' ? handleCreateRandomHexColor : handleCreateRandomRgbColor }>Generate Random Color</button>
+            <div style={{
+                textAlign: "center",
+                color: "#fff",
+                fontSize: "30px",
+                textShadow: "1px 1px 2px black"
+            }}>
+                <h2>{TypeOfColor === 'rgb' ? 'RGB Color' : 'HEX Color'}</h2>
+                <h1>{color}</h1>
+            </div>
         </div>
-    )
+    );
 }
 
-export default Index
+export default Index;
