@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 function App() {
-  // Q1.We have to create an 3 checkboxes for COOUNTRIES With selected And when user Selects on that then We get An (Cross) logo and when we click that then that SELECTED field will be Deleted.
+  // Q1.We have to create an 3 checkboxes for COUNTRIES With selected And when user Selects on that then We get An (Cross) logo and when we click that then that SELECTED field will be Deleted.
   //State change when user Click any one of them .
   const [Array, setArray] = useState([
     {

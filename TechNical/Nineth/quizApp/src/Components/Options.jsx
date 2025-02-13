@@ -1,5 +1,6 @@
 import React from 'react'
 import './Options.css';
+
 function Options({question,answer,dispatch}) {
   return (
     <div>
