@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './style.css';
 
 function Index() {
+
     // State for single selection
     let [singleSelect, setSingleSelect] = useState(null);
 
@@ -16,7 +17,7 @@ function Index() {
         setSingleSelect(singleSelect === item ? null : item);
     }
 
-    // Function for multi-selection
+    // Function for multi-selection 
     function handleMutliSelection(item) {
         let cpyMulti = [...mutli];
         const findIndexOfCurrentId = cpyMulti.indexOf(item);

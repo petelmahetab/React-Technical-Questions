@@ -4,7 +4,7 @@ import { useContext, useState } from 'react'
 const Context = useContext();
 
 const ContactContext = ({ children }) => {
-    //state for  contacts
+    
     const [Contacts, setContacts] = useState([]);
     const calculatePre = (pre) => {
         setContacts([...pre, ...Contacts])

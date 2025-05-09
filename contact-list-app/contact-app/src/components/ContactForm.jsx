@@ -10,12 +10,12 @@ const ContactForm = () => {
   
   const [data, setData] = useState({ name: "", phone: "", email: "" });
 
-  // Focus on first input when component mounts
+  // Focus on first input when component mounts...
   useEffect(() => {
     ref.current.focus();
   }, []);
 
-  // Function for handling input changes
+  // Function for handling input changes...
   function handleInput(e) {
     setData((prev) => ({
       ...prev,
@@ -23,7 +23,7 @@ const ContactForm = () => {
     }));
   }
 
-  // Function for handling form submission
+  // Function for handling form submission..
   function handlingSubmission(e) {
     e.preventDefault();
     if (validate(data)) {
