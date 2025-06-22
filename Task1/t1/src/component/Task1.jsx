@@ -3,7 +3,8 @@ import { useState } from 'react';
 
 const userList = [
     { id: 1, name: 'John Doe' },
-    { id: 2, name: 'Jane Doe' }, { id: 3, name: 'Charlie' }
+    { id: 2, name: 'Jane Doe' }, 
+    { id: 3, name: 'Charlie' }
 ]
 
 const Task1 = () => {
