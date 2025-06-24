@@ -5,6 +5,10 @@ import './App.css'
 import Card from './components/Card'
 import Dynamic from './components/Dynamic'
 import Home from './components/Home'
+import Test from './components/Test'
+import Optimize from './Optimize'
+import FromHandling from './components/FromHandling'
+import Pagination from './components/Pagination'
 
 function App() {
   return (
@@ -18,12 +22,27 @@ function App() {
       {/* <Dynamic title={'Dynamic'} content={'A Children prop would be help reduce Reusability.'}/> */}
 
       {/*3. How should we show user by its ID from URL. */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/user/:id' element={<Users />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+
+
+      {/* 4. We need to build an Custom Hooks for toggling the Button one state to another. */}
+      {/* <Test/> */}
+
+      {/* 5. Performance Optimization */}
+      {/* <Optimize value={'hello'}/> */}
+
+
+      {/* 6. Form Handling */}
+      {/* <FromHandling/> */}
+
+      {/* 7. Pagination applied Dummy API to get 
+      Response */}
+      <Pagination/>
     </>
   )
 }
